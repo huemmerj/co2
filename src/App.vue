@@ -1,51 +1,6 @@
 <template>
   <div id="app" class="wrapper">
-    <nav id="sidebar">
-      <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
-        </div>
-
-        <ul class="list-unstyled components">
-          <p>Dummy Heading</p>
-          <li class="active">
-              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-              <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li>
-                      <a href="#">Home 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Home 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Home 3</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="#">About</a>
-          </li>
-          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                      <a href="#">Page 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 3</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="#">Portfolio</a>
-          </li>
-          <li>
-              <a href="#">Contact</a>
-          </li>
-      </ul>
-    </nav>
+    <sidebar />
     <div id="content">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -59,7 +14,14 @@
     </div>
   </div>
 </template>
-
+<script>
+import Sidebar from './components/sidebar.vue'
+export default {
+  components: {
+    'sidebar':Sidebar,
+  }
+}
+</script>
 <style>
 .wrapper {
     display: flex;
@@ -80,15 +42,12 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
-.wrapper {
-    display: flex;
-    align-items: stretch;
 }
 #sidebar {
     min-width: 250px;
@@ -144,19 +103,19 @@ a, a:hover, a:focus {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    text-decoration: none;
+    color: #ffffff;
 }
 #sidebar ul li a:hover {
     color: #7386D5;
-    background: #fff;
-}
-
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+    background: #000000;
 }
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
+}
+#content {
+  width:100%
 }
 </style>

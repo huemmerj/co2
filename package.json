@@ -21,7 +21,7 @@
     "@vue/cli-plugin-vuex": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.16.0",
     "typescript": "~3.5.3",
     "vue-cli-plugin-bootstrap": "^1.0.0-alpha.1",
